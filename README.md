@@ -2,6 +2,8 @@
 
 This repository hosts the **SRA SharePoint Login Helper**, a lightweight web page designed to assist users in accessing Shirley Ryan AbilityLab's SharePoint resources with the correct Microsoft 365 account.
 
+[Visit the site on GitHub Pages](https://sra-mweber.github.io/sra-sp-login-helper/)
+
 ## 🔍 Purpose
 
 Many users at SRA have multiple Microsoft 365 accounts (e.g., with Northwestern Medicine and SRA). This often leads to access issues when trying to open SharePoint links. This helper page ensures users are signed out of any existing Microsoft 365 session and then redirected to the appropriate SharePoint site.
