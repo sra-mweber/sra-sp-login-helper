@@ -56,13 +56,19 @@
     </div>
   </div>
 
-  <script>
-    function redirectTo(targetUrl) {
-      window.location.href = "https://login.microsoftonline.com/logout.srf";
-      setTimeout(function() {
-        window.location.href = targetUrl;
-      }, 3000);
-    }
-  </script>
+<script>
+  function redirectTo(targetUrl) {
+    // Open logout in a hidden iframe so the current page stays active
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = "https://login.microsoftonline.com/logout.srf";
+    document.body.appendChild(iframe);
+
+    // Redirect after a short delay
+    setTimeout(function () {
+      window.location.href = targetUrl;
+    }, 3000); // 3 seconds
+  }
+</script>
 </body>
 </html>
